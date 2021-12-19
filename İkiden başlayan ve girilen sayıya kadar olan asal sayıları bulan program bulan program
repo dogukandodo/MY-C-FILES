@@ -1,0 +1,30 @@
+#include <stdio.h>
+int main()
+{
+	int i, sayi,j;
+	printf("\tIKIDEN BASLAYAN VE GIRILEN DEGER  ARASINDAKI ASAL SAYILARI BULMA PROGRAMI");
+	printf("\nBir Sayi Giriniz:");
+	scanf("%d", &sayi);
+  // SAYIMIZI GİRDİK VE sayi DEĞİŞKENİMİZE ATADIK.
+
+	for (i = 2; i <= sayi; i++)
+	{
+		int saglama = 0;
+    // saglama ADINDA BİR DEĞİŞKEN OLUŞTURUYORUZ ASAL OLUP OLMADIĞINA BUNUN İLE BAKICAZ.
+		for (j = 2; j < i; j++)
+		{
+			if (i % j == 0)
+			{
+				saglama = 1;
+        // EĞER BİR SAYI TAM BÖLÜNÜYORSA(ASAL KURALLARINA AYKIRI) saglama DEĞİŞKENİMİZ "1" OLUCAK.
+			}
+			
+		}
+		if (saglama == 0)
+		{
+    //EĞER HİÇ TAM BÖLÜNMEMİŞSE(saglama 1 DEĞİL 0 İSE)  SAYIMIZI YAZDIRSIN 
+			printf("%d\n", i);
+		}
+
+	}
+}
